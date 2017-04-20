@@ -1,0 +1,26 @@
+{
+  "name": "foresta.me",
+  "version": "1.0.0",
+  "description": "kz_morita's page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foresta/blog.foresta.me.git"
+  },
+  "author": "kz_morita",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-run": "^1.7.1",
+    "gulp-sass": "^3.1.0",
+    "node-sass": "^4.5.2",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
