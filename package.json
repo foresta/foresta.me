@@ -1,24 +1,24 @@
 {
   "name": "foresta.me",
   "version": "1.0.0",
-  "description": "kz_morita's page",
+  "description": "foresta's webpage",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/gulp"
+    "start": "npx parcel ./src/index.html"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/foresta/blog.foresta.me.git"
+    "url": "git+https://github.com/foresta/foresta.me.git"
   },
   "author": "kz_morita",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/foresta/foresta.me/issues"
+  },
+  "homepage": "https://github.com/foresta/foresta.me#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.8",
-    "gulp": "^3.9.1",
-    "gulp-plumber": "^1.1.0",
-    "gulp-run": "^1.7.1",
-    "gulp-sass": "^3.1.0",
-    "vinyl-source-stream": "^1.1.0"
+    "parcel": "^1.10.3",
+    "sass": "^1.14.2"
   }
 }
