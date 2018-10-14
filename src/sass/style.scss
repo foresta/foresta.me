@@ -8,40 +8,59 @@
 }
 
 #top {
-  color: white;
-  background-color: $blue-green;
+  color: $text-color;
+  background-color: $bg-color;
   text-align: center;
 
   display: flex;
 
-  h1 {
+  .wrap {
     width: auto;
-    height: 13vmin;
-    line-height: 13vmin;
-    font-size: 13vmin;
-
     margin: auto;
 
-    font-weight:  100;
-    letter-spacing: 0.4rem;
+    h1 {
+      width: auto;
+      height: 13vmin;
+      line-height: 13vmin;
+      font-size: 13vmin;
+
+      margin: auto;
+
+      font-weight:  100;
+      letter-spacing: 0.4rem;
+    }
+
+    .contents {
+
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .item {
+        width: 123px; 
+        height: 123px;
+        display: flex-box;
+        border-radius: 62px;
+        margin: auto;
+
+        background-color: #ffffff;
+
+        &.profile { background-color: $profile-color; }
+        &.qiita { background-color: $qiita-color; }
+        &.github { background-color: $github-color; }
+        &.twitter { background-color: $twitter-color; }
+        &.blog { background-color: $blog-color; }
+      }
+
+    }
+
+
+    a {
+      display: block;
+    }
   }
-}
 
-#aboutme {
-  background-color: $blue-green-light;
-
-  .left {
-    text-align: center;
-    padding-top: 50px;
-  }
-}
-
-#skills {
-  background-color: $blue-green-dark;
-}
-
-#contact {
-  background-color: $sub-color;
 }
 
 .profile-img {
@@ -63,24 +82,6 @@
   .box {
     width: 450px;
   }
-
-  // @include madia-sp {
-  //   .box { width: 100%; }
-  // }
-
-  // @include media-tb {
-  //   .box { width: 100%; }
-  // }
-  
-  // @include media-pc {
-  //   @for $i from 1 through 10 {
-  //     &.col#{$i} {
-  //       .box {
-  //         width: #{(100% / $i)};
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 .container {
