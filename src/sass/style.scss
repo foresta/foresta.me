@@ -15,42 +15,54 @@
   display: flex;
 
   .wrap {
-    width: auto;
+    width: 100%;
+    max-width: 900px;
     margin: auto;
 
     h1 {
       width: auto;
-      height: 13vmin;
-      line-height: 13vmin;
-      font-size: 13vmin;
+      height: 15vmin;
+      line-height: 15vmin;
+      font-size: 15vmin;
 
       margin: auto;
 
-      font-weight:  100;
+      font-weight:  500;
       letter-spacing: 0.4rem;
     }
 
     .contents {
 
       margin-top: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-around;
 
       .item {
         width: 123px; 
         height: 123px;
+
         display: flex-box;
         border-radius: 62px;
         margin: auto;
-
-        background-color: #ffffff;
 
         &.profile { background-color: $profile-color; }
         &.qiita { background-color: $qiita-color; }
         &.github { background-color: $github-color; }
         &.twitter { background-color: $twitter-color; }
         &.blog { background-color: $blog-color; }
+
+        a {
+          color: white;
+          font-weight: 100;
+          line-height: 123px;
+          font-size: 3.0rem;
+          text-decoration: none;
+        }
+
+        &.profile a { color: $text-color; }
       }
 
     }
