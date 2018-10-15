@@ -16,7 +16,7 @@
 
   .wrap {
     width: 100%;
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
 
     h1 {
@@ -33,43 +33,60 @@
 
     .contents {
 
-      margin-top: 50px;
+      margin-top: 12vmin;
       padding-left: 20px;
       padding-right: 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
 
+      $item-width: 20vmin;
+      $item-height: 11.5vmin;
+
       .item {
-        width: 123px; 
-        height: 123px;
+        position: relative;
+        width: $item-width;
+        height: $item-height;
 
         display: flex-box;
-        border-radius: 62px;
         margin: auto;
 
-        &.profile { background-color: $profile-color; }
-        &.qiita { background-color: $qiita-color; }
-        &.github { background-color: $github-color; }
-        &.twitter { background-color: $twitter-color; }
-        &.blog { background-color: $blog-color; }
 
+        &:before, &:after {
+          display: block;
+          position: absolute;
+          top: 0;
+          content: "";
+          width: $item-width;
+          height: $item-height;
+          z-index: 0;
+        }
+
+        &:before { transform: rotate(60deg); }
+        &:after  { transform: rotate(-60deg); }
+
+        &.qiita > a, &.qiita:before, &.qiita:after { background-color: $qiita-color; }
+        &.profile > a, &.profile:before, &.profile:after { background-color: $profile-color; }
+        &.github > a, &.github:before, &.github:after { background-color: $github-color; }
+        &.twitter > a, &.twitter:before, &.twitter:after { background-color: $twitter-color; }
+        &.blog > a, &.blog:before, &.blog:after { background-color: $blog-color; }
+
+        &.profile a { color: $text-color; }
+        
         a {
+          position: absolute;
+          z-index: 1;
+          display: block;
           color: white;
           font-weight: 100;
-          line-height: 123px;
-          font-size: 3.0rem;
+          width: 100%;
+          line-height: $item-height;
+          font-size: 5vmin;
           text-decoration: none;
         }
 
-        &.profile a { color: $text-color; }
       }
 
-    }
-
-
-    a {
-      display: block;
     }
   }
 
